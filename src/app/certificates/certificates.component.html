@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 px-0">
+      <div class="content-section play-course-mid panel">
+        <div class="row content-area" style="margin-bottom: 30px !important;">
+          <div class="col-md-8  offset-md-2 pull-md-2">
+            <h3><strong>Certificate List - Screen</strong></h3>
+          </div>
+        </div>
+
+        <div
+          id="contentToConvert"
+          *ngFor="
+            let certificate of icertificates.certificateTempList;
+            let i = index
+          "
+          class="row content-area"
+        >
+          <div class="col-md-8  offset-md-2 pull-md-2">
+            <h4>
+              <strong>{{ certificate.resourceTitle }}</strong>
+            </h4>
+          </div>
+          <div class="col-md-8 offset-md-2 pull-md-2">
+            <h4>{{ certificate.issuedDate | date: "dd/MM/yyyy" }}</h4>
+          </div>
+          <div class="col-md-8  offset-md-2 pull-md-2" style="margin-top:10px;">
+            <h4>{{ certificate.resourceType }}</h4>
+          </div>
+          <div
+            class="col-md-8  offset-md-2 pull-md-2"
+            style="margin-bottom: 30px !important;margin-bottom: 10px !important;"
+          >
+            <button
+              class="btn btn-info float-left"
+              aria-label="Download"
+              (click)="details(certificate.id)"
+            >
+              <span class="fa fa-file-o fa-lg" aria-hidden="true">
+                Get Certificate</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <div class="row content-area" style="margin-bottom: 50px !important;">
+          <div class="col-md-8  offset-md-2 pull-md-2">
+            <p-dataTable
+              [value]="icertificates.certificateTempList"
+              [lazy]="true"
+              [paginator]="true"
+              [rows]="15"
+              [totalRecords]="icertificates.totalRecords"
+              (onLazyLoad)="loadCertLazy($event)"
+            >
+            </p-dataTable>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

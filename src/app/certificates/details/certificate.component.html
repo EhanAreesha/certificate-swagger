@@ -1,0 +1,87 @@
+<section>
+  <div class="container">
+    <div class="row ">
+      <div
+        class="col-md-8  offset-md-2 pull-md-2"
+        style="margin-top: 20px !important;margin-bottom: 10px !important;"
+      >
+        <div class="float-right">
+          <button
+            type="button"
+            class="btn btn-primary"
+            aria-label="Download"
+            (click)="captureScreen()"
+          >
+            <span class="fa fa-print fa-lg" aria-hidden="true"> Print</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="contentToConvert"
+      class="edx-background mx-auto"
+      style="margin-top: 50px;"
+    >
+      <div class="row">
+        <div class="col-6 pt-4 pl-5">
+          <h1 class="verified-text">VERIFIED</h1>
+          <p class="verified-bottom-text">
+            <span><strong>CERTIFICATE</strong></span
+            >&nbsp;<i>of</i>&nbsp;<span><strong>COMPLETION</strong></span>
+          </p>
+        </div>
+        <div class="col-6 pt-4 pr-5">
+          <h1 class="institution-name text-right">HarvardX</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8 pt-4 pl-5 ptext">
+          <p class="text-muted">This is to certify that</p>
+          <h5 class="bold">{{ icertificate.certificate.username }}</h5>
+          <p class="text-muted">
+            successfully completed and received a passing grade in
+          </p>
+          <h5 class="bold">{{ icertificate.certificate.resourceType }}</h5>
+          <p class="text-muted">
+            a course of study offered by HarvardX, an online learning initiative
+            of Harvard
+          </p>
+          <p class="text-muted" style="margin-top: -15px;">
+            University through edX
+          </p>
+        </div>
+        <div class="col-4 pt-4 pr-5">
+          <div class="professor-text">
+            <h6 class="text-right">David J. Malan</h6>
+            <p class="text-muted mb-0">Gordan McKay Professor</p>
+            <p class="text-muted mb-0">of the Practice of Computer Science</p>
+            <p class="text-muted mb-0">Harvard University</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-3 py-5 pl-5">
+          <img class="logo-img" [src]="icertificate.leftLogo" alt="" />
+        </div>
+        <div class="col-md-4 col-3 py-5">
+          <p class="text-muted mb-0 font-md-10">VERIFIED CERTIFICATE</p>
+          <h6 class="font-lg-14 font-md-10">
+            Issued :
+            <span>{{
+              icertificate.certificate.issuedDate | date: "dd/MM/yyyy"
+            }}</span>
+          </h6>
+        </div>
+        <div class="col-md-4 col-3 py-5">
+          <p class="text-muted mb-0 font-md-10">VALID CERTIFICATE ID</p>
+          <h6 class="font-lg-14 font-md-10">
+            <span>{{ icertificate.certificate.id }}</span>
+          </h6>
+        </div>
+        <div class="col-md-2 col-3 py-5">
+          <img class="bottom-logo" [src]="icertificate.rightLogo" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

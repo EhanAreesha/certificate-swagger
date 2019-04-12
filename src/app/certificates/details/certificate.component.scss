@@ -1,0 +1,92 @@
+
+.edx-background{
+    background-image: URL("./../../assets/images/edx-background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-height: 700px;
+    max-width: 880px;
+    border: 8px solid #000;
+}
+.verified-text {
+    color: #3fa66d;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+}
+.verified-bottom-text{
+    font-size: 15px;
+    color: #3fa66d;
+}
+.institution-name{
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+}
+.logo-img{
+    max-height: 100px;
+    max-width: 100%;
+    min-width: 70px;
+}
+.ptext p{
+    font-size: 12px;
+    letter-spacing: 0;
+}
+.professor-text p{
+    font-size: 12px;
+    letter-spacing: 0;
+    text-align: right;
+}
+.bottom-logo{
+    position: absolute;
+    position: absolute;
+    top: -19px;
+    height: 125px;
+    right: 35px;
+}
+@media print {
+    header nav, footer {
+       display: none;
+    }
+}
+@media (max-width: 767px) {
+    .bottom-logo{
+        right: 25px;
+        height: 80px;
+        top: 25px;
+    }
+    .institution-name{
+        font-size: 50px;
+        font-weight: 500;
+    }
+    .verified-text{
+        font-size: 32px;
+    }
+    .verified-bottom-text{
+        font-size: 12px;
+    }
+    .ptext p{
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    .ptext h5{
+        font-size: 14px;
+    }
+    .font-md-10{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 767px)  {
+    .font-lg-14{
+        font-size: 14px;
+    }
+}
+@media (max-width: 991px) {
+    .bottom-logo{
+        right: 25px;
+    }
+    .professor-text p{
+        font-size: 10px;
+    }
+}
